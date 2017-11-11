@@ -1,5 +1,4 @@
-
-  function initMap() {
+function initMap() {
     var usa = {lat: 39 , lng: -102};
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
@@ -277,56 +276,75 @@
 
       });
 
+//get request for nytimes
+var url = "https://api.nytimes.com/svc/topstories/v2/national.json";
 
-    // Create an array of alphabetical characters used to label the markers.
-   // var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-    // make the markers based on the locations
-    var markers = locations.map(function(location, i) {
-      return new google.maps.Marker({
-        position: location,
-        // label: labels[i % labels.length]
-      });
-    });
-
-    // Add a marker clusterer to manage the markers.
-  var markerCluster = new MarkerClusterer(map, markers,
-      {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
-    );
-}
-var locations = [
-  {lat: -31.563910, lng: 147.154312},
-  {lat: -33.718234, lng: 150.363181},
-  {lat: -33.727111, lng: 150.371124},
-  {lat: -33.848588, lng: 151.209834},
-  {lat: -33.851702, lng: 151.216968},
-  {lat: -34.671264, lng: 150.863657},
-  {lat: -35.304724, lng: 148.662905},
-  {lat: -36.817685, lng: 175.699196},
-  {lat: -36.828611, lng: 175.790222},
-  {lat: -37.750000, lng: 145.116667},
-  {lat: -37.759859, lng: 145.128708},
-  {lat: -37.765015, lng: 145.133858},
-  {lat: -37.770104, lng: 145.143299},
-  {lat: -37.773700, lng: 145.145187},
-  {lat: -37.774785, lng: 145.137978},
-  {lat: -37.819616, lng: 144.968119},
-  {lat: -38.330766, lng: 144.695692},
-  {lat: -39.927193, lng: 175.053218},
-  {lat: -41.330162, lng: 174.865694},
-  {lat: -42.734358, lng: 147.439506},
-  {lat: -42.734358, lng: 147.501315},
-  {lat: -42.735258, lng: 147.438000},
-  {lat: -43.999792, lng: 170.463352}
-]
-
-$("#btn").click(function(){
-            var geocoder =  new google.maps.Geocoder();
-    geocoder.geocode( { 'address': 'miami, us'}, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK) {
-            alert("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng());
-          } else {
-            alert("Something got wrong " + status);
-          }
-        });
+url += '?' + $.param({
+  'api-key': "20ec7403e3f64b35b7abeef0bb5dfb4b"
 });
+
+
+function parseResult(results){
+	console.log('parsing result....');
+	var articles = results['results'];
+	console.log(articles);
+
+	var data = {};
+	var arrdata = [];
+
+	for(var i = 0; i < articles.length; i++){
+		//console.log(articles[i]['title']);
+		if(articles[i]['geo_facet'][0] !== undefined){
+			data = {
+				title: articles[i]['title'],
+				location: articles[i]['geo_facet'][0],
+				url: articles[i]['url']
+			}
+			arrdata.push(data);
+		}
+
+	}
+		console.log(arrdata);
+    for(var i = 0; i < arrdata.length; i++){
+      makeMarker(arrdata[i]);
+    }
+		return arrdata;
+}
+
+$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(result) {
+  //console.log(result);
+	parseResult(result);
+}).fail(function(err) {
+  throw err;
+});
+
+function makeMarker(data){
+                var geocoder =  new google.maps.Geocoder();
+                geocoder.geocode( { 'address': data["location"] }, function(results, status) {
+                  if (status == google.maps.GeocoderStatus.OK) {
+                    var location = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()};
+                    var marker = new google.maps.Marker({
+                      position: location,
+                      map: map
+                    });
+                    var contentString = "<a href="+data["url"]+">"+ data["title"]+ "</a>";
+                    var infoWindow = new google.maps.InfoWindow({
+                      content: contentString
+                    });
+                    marker.addListener('click', function() {
+                      infoWindow.open(map,marker);
+                    });
+                  } else {
+                    return ("Something got wrong " + status);
+                  }
+                });
+      }
+
+  //   // Add a marker clusterer to manage the markers.
+  // var markerCluster = new MarkerClusterer(map, markers,
+  //     {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
+//   //   );
+}
