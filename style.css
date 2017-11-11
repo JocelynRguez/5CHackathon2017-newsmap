@@ -23,3 +23,19 @@ body{
   margin: auto;
   text-align: center;
 }
+
+.buttons {
+  border: none;
+  width: 100px;
+  height: 30px;
+  background-color: #4C4C4C;
+  color: white;
+}
+
+.buttons:hover {
+  background-color: #787d87;
+}
+
+th {
+  padding: 0px 15px;
+}
