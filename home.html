@@ -1,6 +1,1068 @@
-<!doctype html>
+<!DOCTYPE html>
+    <head><title>{title}</title>
+    <link rel="shortcut icon" href="{favicon}">
 
-<html>
+    <!--------------------------------------------------------------------
+
+    THEME #016: AWAREMONO
+    published june 29, 2017
+    ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ © ᴀɴɢᴇʟɪᴄxɪ ᴜɴᴅᴇʀ ɢᴘʟ ʟɪᴄᴇɴsɪɴɢ
+    ᴜɴᴀᴜᴛʜᴏʀɪᴢᴇᴅ ʀᴇᴅɪsᴛʀɪʙᴜᴛɪᴏɴ ɪs sᴛʀɪᴄᴛʟʏ ᴘʀᴏʜɪʙɪᴛᴇᴅ.
+
+    Terms of Use:
+    - DO NOT USE AS A BASE CODE.
+    - DO NOT REDISTRIBUTE, REPRODUCE, OR CLAIM AS YOURS.
+    - DO NOT MODIFY BEYOND THE POINT OF RECOGNITION.
+
+    By using this theme, you indicate that you have read & agreed to these terms. Any violation will be prosecuted against. If there's anything you'd like me to make clear, please contact me via PM. Enjoy!
+
+    ~Lia
+
+    --------------------------------------------------------------------->
+
+    <!--META: COLORS-->
+    <meta name="color:Background" content="#eef5f5"/>
+    <meta name="color:Container Background" content="#78c4b5"/>
+    <meta name="color:Container Border" content="#ffffff"/>
+    <meta name="color:Sidebar Border" content="#ffffff"/>
+    <meta name="color:Sidebar Hover Content BG" content="#78c4b5"/>
+    <meta name="color:Title" content="#ffffff"/>
+    <meta name="color:Title Shadow" content="#dcdddd"/>
+    <meta name="color:Description" content="#ffffff"/>
+    <meta name="color:Menu Background" content="#ffffff"/>
+    <meta name="color:Menu Hover" content="#f5af0f"/>
+    <meta name="color:Post Background" content="#deeceb"/>
+    <meta name="color:Post Border" content="#ffffff"/>
+    <meta name="color:Text" content="#3c625a"/>
+    <meta name="color:Bold" content="#f5af0f"/>
+    <meta name="color:Italic" content="#f5af0f"/>
+    <meta name="color:Underline" content="#f5af0f"/>
+    <meta name="color:Links" content="#78c4b5"/>
+    <meta name="color:Links Hover" content="#f5af0f"/>
+    <meta name="color:Info Links" content="#78c4b5"/>
+    <meta name="color:Info Links Hover" content="#55b4a2"/>
+    <meta name="color:Info Links BG" content="#eef5f5"/>
+    <meta name="color:Tags" content="#ffffff"/>
+    <meta name="color:Tags Hover" content="#55b4a2"/>
+    <meta name="color:Post Title" content="#55b4a2"/>
+    <meta name="color:Post Title BG" content="#eef5f5"/>
+    <meta name="color:Audio Post Title" content="#55b4a2"/>
 
 
-</html>
+    <!--META: FUNCTIONS-->
+    <meta name="if:500px Posts" content="1"/>
+    <meta name="if:400px Posts" content="0"/>
+    <meta name="if:Invert Tumblr Controls" content="0"/>
+    <meta name="if:Gradient Background" content="1"/>
+    <meta name="if:Wallpaper Background" content="0"/>
+    <meta name="if:Plain Color Background" content="0"/>
+    <meta name="if:Transparent Container Background" content="1"/>
+    <meta name="if:Opaque Container Background" content="0"/>
+    <meta name="if:Transparent Post Background" content="0"/>
+    <meta name="if:Solid Post Background" content="1"/>
+    <meta name="if:abowmanFish Sidebar" content="1"/>
+    <meta name="if:Japanese Title" content="1"/>
+    <meta name="if:English Title" content="0"/>
+    <meta name="image:Background" content=""/>
+    <meta name="image:Sidebar" content=""/>
+    <meta name="text:Title" content="put your custom title here"/>
+    <meta name="text:Description" content="put your custom description text here"/>
+    <meta name="text:BG Gradient 1" content="rgba(160, 215, 195, 1)"/>
+    <meta name="text:BG Gradient 2" content="rgba(0, 130, 130, 1)"/>
+    <meta name="text:Transparent Container Background" content="rgba(240, 240, 240, 0.5)"/>
+    <meta name="text:Sidebar Background" content="rgba(250, 250, 250, 0.7)"/>
+    <meta name="text:Transparent Post Background" content="rgba(250, 250, 250, 0.7)"/>
+    <meta name="text:Link 1 Title" content="Home"/>
+    <meta name="text:Link 1 URL" content="IT'S IMPORTANT THAT YOU PUT YOUR BLOG URL HERE"/>
+    <meta name="text:Link 2 Title" content="Message"/>
+    <meta name="text:Link 2 URL" content="IT'S IMPORTANT THAT YOU PUT YOUR ASK LINK HERE"/>
+    <meta name="text:Link 3 Title" content="Archive"/>
+    <meta name="text:Link 3 URL" content="link three url"/>
+    <meta name="text:Link 4 Title" content="About"/>
+    <meta name="text:Link 4 URL" content="link four url"/>
+    <meta name="text:Link 5 Title" content="Sitemap"/>
+    <meta name="text:Link 5 URL" content="link five url"/>
+
+
+    <!--META: FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/ef30ca543c.js"></script>
+
+
+    <style type="text/css">
+    body {
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfPlainColorBG}
+         background: {color:background};
+         {/block:IfPlainColorBG}
+         background-color: {color:background};
+         margin: 0px;
+    }
+
+    a {
+         text-decoration: none;
+    }
+
+    small {
+         font-size: 95%;
+    }
+
+    pre {
+         font-size: 95%;
+         word-wrap: break-all;
+         word-break: break-all;
+    }
+
+    hr {
+         color: {color:post border};
+         height: 1px;
+    }
+
+    blockquote {
+         word-wrap: normal;
+         word-break: normal;
+         margin-left: 10px;
+         margin-right: 0px;
+         padding: 5px;
+         border-left: 2px solid {color:post border};
+    }
+
+    blockquote blockquote {
+         word-wrap: normal;
+         word-break: normal;
+         margin-left: 15px;
+         margin-right: 0px;
+         padding: 5px;
+         border-left: 2px solid {color:post border};
+    }
+
+    blockquote img {
+         width: auto;
+         max-width: 460px;
+         overflow: hidden;
+    }
+
+    blockquote blockquote img {
+         width: auto;
+         max-width: 425px;
+         overflow: hidden;
+    }
+
+    u, li img {
+         width: auto;
+         max-width: 425px;
+         overflow: hidden;
+    }
+
+    /* H1 DEFINES THE TITLE STYLING. */
+    h1 {
+         color: {color:title};
+         {block:IfJapaneseTitle}
+         height: 300px;
+         width: 35px;
+         font-family: 'Noto Sans Japanese';
+         font-size: 35px;
+         font-weight: 300;
+         text-shadow: 0px 0px 5px {color:title shadow};
+         margin-top: 40px;
+         margin-left: auto;
+         margin-right: auto;
+         {/block:IfJapaneseTitle}
+         {block:IfEnglishTitle}
+         width: 200px;
+         font-family: 'Playfair Display';
+         font-size: 35px;
+         text-align: center;
+         text-shadow: 0px 0px 5px {color:title shadow};
+         margin-top: 185px;
+         margin-left: 25px;
+         {/block:IfEnglishTitle}
+    }
+
+    h2 {
+         font-size: 14px;
+         padding: 10px;
+         text-align: center;
+         text-transform: uppercase;
+    }
+
+    h3 {
+         {block:If500pxPosts}
+         width: 460px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 360px;
+         {/block:If400pxPosts}
+         background-color: {color:post title bg};
+         color: {color:post title};
+         font-family: 'Arial';
+         font-size: 15px;
+         font-variant: small-caps;
+         letter-spacing: 1px;
+         text-align: center;
+         text-transform: lowercase;
+         padding: 20px;
+         margin-top: 5px;
+         margin-bottom: 15px;
+    }
+
+    /* THIS IS THE CONTAINER THAT HAS EVERYTHING INSIDE IT. */
+    #wap {
+         {block:IfTransparentContainerBackground}
+         background-color: {text:transparent container background};
+         {/block:IfTransparentContainerBackground}
+         {block:IfOpaqueContainerBackground}
+         background-color: {color:container background};
+         {/block:IfOpaqueContainerBackground}
+         height: 560px;
+         {block:If500pxPosts}
+         width: 1080px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 980px;
+         {/block:If400pxPosts}
+         border: 2px solid {color:container border};
+         margin-top: 6vh;
+         margin-left: auto;
+         margin-right: auto;
+    }
+
+    /* THIS IS THE FIRST SCREEN. */
+    #sa {
+         background-image: url('{image:sidebar}');
+         height: 560px;
+         width: 400px;
+         position: fixed;
+    }
+
+    /* abowmanFish SCRIPT! */
+    {block:IfAbowmanFishSidebar}
+    .fish {
+         z-index: 9;
+    }
+    {/block:IfAbowmanFishSidebar}
+
+    /* YOUR "SIDEBAR" ITSELF. */
+    #stamp {
+         background-color: {text:sidebar background};
+         width: 250px;
+         height: 400px;
+         border: 1px dotted {color:sidebar border};
+         outline: 1px solid {color:sidebar border};
+         outline-offset: 3px;
+         margin-top: 80px;
+         margin-left: 74px;
+         position: fixed;
+         z-index: 15;
+    }
+
+    #stamp:hover #sidebar {
+         opacity: 1;
+    }
+
+    #sidebar {
+         opacity: 0;
+         background-color: {color:sidebar hover content bg};
+         height: 400px;
+         width: 250px;
+         transition: ease-in-out 0.3s;
+         position: fixed;
+    }
+
+    #description {
+         height: 300px;
+         width: 170px;
+         color: {color:description};
+         font-family: 'Noto Sans';
+         font-size: 10px;
+         font-weight: 300;
+         text-align: center;
+         margin-top: 50px;
+         margin-left: 40px;
+         overflow-y: auto;
+    }
+
+    #description a, a:active, a:visited {
+         color: {color:description};
+    }
+
+    #description a:hover {
+         font-style: italic;
+         transition: ease-in-out 0.3s;
+    }
+
+    #description b {
+         font-weight: 700;
+    }
+
+    #mbar {
+         background-color: {color:menu background};
+         height: 560px;
+         width: 60px;
+         font-size: 20px;
+         text-align: center;
+         margin-left: 400px;
+         position: fixed;
+    }
+
+    #mbar p {
+         padding-top: 44px;
+    }
+
+    #mbar a:hover {
+         color: {color:menu hover};
+         transition: ease-in-out 0.3s;
+    }
+
+    /* ltt AFFECTS THE LINK TITLES. EACH LT(NMBER) AFFECTS A CORRESPONDING MENU ITEM IN NUMEROLOGICAL TOP-DOWN ORDER. */
+    #mbar .ltt {
+         color: transparent;
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         background-clip: text;
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
+         -o-background-clip: text;
+         font-family: 'Arial';
+         font-size: 10px;
+         font-weight: bold;
+         font-variant: small-caps;
+         text-transform: lowercase;
+         cursor: help;
+    }
+
+    .lt1 {
+         margin-top: -15px;
+         padding-bottom: 15px;
+    }
+
+    .lt2 {
+         margin-top: 0px;
+         padding-bottom: 15px;
+    }
+
+    .lt3 {
+         margin-top: 0px;
+         padding-bottom: 15px;
+    }
+
+    .lt4 {
+         margin-top: 0px;
+         padding-bottom: 15px;
+    }
+
+    .lt5 {
+         margin-top: 0px;
+         padding-bottom: 15px;
+    }
+
+    .lt6 {
+         margin-top: 0px;
+         padding-bottom: 15px;
+    }
+
+    .lt7 {
+         margin-top: 0px;
+         padding-bottom: 15px;
+    }
+
+    .lt8 {
+         margin-top: 0px;
+         padding-bottom: 15px;
+    }
+
+
+    /* THIS AFFECTS THE FIRST (HOME) LINK. IF YOU WISH TO CHANGE THE ICON, REMEMBER TO CHANGE ITS' NAME (EG. fa-home) ***BOTH*** HERE AND BELOW UNDER BODY! REPEAT THE PROCESS FOR ALL ICONS YOU WISH TO CHANGE, AS NEEDED. */
+    .fa-power-off {
+         color: transparent;
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfPlainColorBG}
+         background: {color:background};
+         {/block:IfPlainColorBG}
+         background-clip: text;
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
+         -o-background-clip: text;
+    }
+
+    .fa-power-off:hover {
+         color: {color:menu hover};
+         transition: ease-in-out 0.3s;
+    }
+
+    .fa-telegram {
+         color: transparent;
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfPlainColorBG}
+         background: {color:background};
+         {/block:IfPlainColorBG}
+         background-clip: text;
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
+         -o-background-clip: text;
+    }
+
+    .fa-telegram:hover {
+         color: {color:menu hover};
+         transition: ease-in-out 0.3s;
+    }
+
+    .fa-clock-o {
+         color: transparent;
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfPlainColorBG}
+         background: {color:background};
+         {/block:IfPlainColorBG}
+         background-clip: text;
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
+         -o-background-clip: text;
+    }
+
+    .fa-clock-o:hover {
+         color: {color:menu hover};
+         transition: ease-in-out 0.3s;
+    }
+
+    .fa-user-circle {
+         color: transparent;
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfPlainColorBG}
+         background: {color:background};
+         {/block:IfPlainColorBG}
+         background-clip: text;
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
+         -o-background-clip: text;
+    }
+
+    .fa-user-circle:hover {
+         color: {color:menu hover};
+         transition: ease-in-out 0.3s;
+    }
+
+    .fa-plus-circle {
+         color: transparent;
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfPlainColorBG}
+         background: {color:background};
+         {/block:IfPlainColorBG}
+         background-clip: text;
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
+         -o-background-clip: text;
+    }
+
+    .fa-plus-circle:hover {
+         color: {color:menu hover};
+         transition: ease-in-out 0.3s;
+    }
+
+    /* FA-COG DEFINES THE CREDIT. PLEASE DO NOT ALTER OR REMOVE IT FROM ITS' POSITION - IT MUST ALWAYS BE LAST! CHANGING THE ICON ITSELF IS O.K. THOUGH, BUT NO OTHER ALTERATION, PLEASE. */
+    .fa-cog {
+         color: transparent;
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfPlainColorBG}
+         background: {color:background};
+         {/block:IfPlainColorBG}
+         background-clip: text;
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
+         -o-background-clip: text;
+    }
+
+    .fa-cog:hover {
+         color: {color:menu hover};
+         transition: ease-in-out 0.3s;
+    }
+
+    /* RIGHT CHEVRON DEFINES THE "NEXT" PAGINATION BUTTON. */
+    .fa-chevron-circle-right {
+         color: transparent;
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfPlainColorBG}
+         background: {color:background};
+         {/block:IfPlainColorBG}
+         background-clip: text;
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
+         -o-background-clip: text;
+    }
+
+    .fa-chevron-circle-right:hover {
+         color: {color:menu hover};
+         transition: ease-in-out 0.3s;
+    }
+
+    /* LEFT CHEVRON DEFINES THE "BACK" PAGINATION BUTTON. */
+    .fa-chevron-circle-left {
+         color: transparent;
+         {block:IfGradientBackground}
+         background: linear-gradient(150deg, {text:bg gradient 1} 0%, {text:bg gradient 2} 100%) no-repeat fixed;
+         {/block:IfGradientBackground}
+         {block:IfWallpaperBackground}
+         background: url('{image:background}') no-repeat fixed;
+         {/block:IfWallpaperBackground}
+         {block:IfPlainColorBG}
+         background: {color:background};
+         {/block:IfPlainColorBG}
+         background-clip: text;
+         -webkit-background-clip: text;
+         -moz-background-clip: text;
+         -o-background-clip: text;
+    }
+
+    .fa-chevron-circle-left:hover {
+         color: {color:menu hover};
+         transition: ease-in-out 0.3s;
+    }
+
+    /* THIS IS THE RIGHT SIDE. */
+    #sb {
+         height: 560px;
+         {block:If500pxPosts}
+         width: 620px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 520px;
+         {/block:If400pxPosts}
+         margin-left: 460px;
+         position: fixed;
+         overflow-y: auto;
+         overflow-x: none;
+    }
+
+    /* POSTS */
+
+    #post {
+         {block:If500pxPosts}
+         width: 500px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 400px;
+         {/block:If400pxPosts}
+         {block:IfSolidPostBackground}
+         background-color: {color:post background};
+         {/block:IfSolidPostBackground}
+         {block:IfTransparentPostBackground}
+         background-color: {text:transparent post background};
+         {/block:IfTransparentPostBackground}
+         color: {color:text};
+         font-family: 'Noto Sans';
+         font-size: 10px;
+         word-wrap: normal;
+         border: 2px solid {color:post border};
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-bottom: 30px;
+         padding-right: 20px;
+         margin-top: 50px;
+         margin-left: auto;
+         margin-right: auto;
+         z-index: 7;
+    }
+
+    #post p {
+         margin: 10px;
+    }
+
+    #post a, a:active, a:visited {
+         color: {color:links};
+         text-decoration: none;
+    }
+
+    #post a:hover {
+         color: {color:links hover};
+         text-decoration: none;
+    }
+
+    #post b, strong {
+         color: {color:bold};
+         font-weight: 600;
+    }
+
+    #post i, em {
+         color: {color:italic};
+    }
+
+    #post u, underline {
+         color: {color:underline};
+         text-decoration: underline;
+    }
+
+    #info {
+         {block:If500pxPosts}
+         width: 500px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 400px;
+         {/block:If400pxPosts}
+         background-color: {color:info links bg};
+         color: {color:info links};
+         font-family: 'Arial';
+         font-size: 10px;
+         font-variant: small-caps;
+         text-transform: lowercase;
+         text-align: center;
+         border-left: 2px solid {color:post border};
+         border-right: 2px solid {color:post border};
+         border-bottom: 2px solid {color:post border};
+         padding: 20px;
+         margin-top: 0px;
+         margin-left: auto;
+         margin-right: auto;
+         z-index: 7;
+    }
+
+    #info a, a:active, a:visited {
+         color: {color:info links};
+    }
+
+    #info a:hover {
+         color: {color:info links hover};
+    }
+
+    #tags {
+         {block:If500pxPosts}
+         width: 500px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 400px;
+         {/block:If400pxPosts}
+         background-color: transparent;
+         color: {color:post border};
+         font-family: 'Nunito Sans';
+         font-size: 10px;
+         font-weight: 300;
+         letter-spacing: 1px;
+         text-transform: lowercase;
+         word-break: break-all;
+         margin-top: 0px;
+         margin-bottom: 50px;
+         margin-left: auto;
+         margin-right: auto;
+         padding: 10px;
+    }
+
+    #tags a, a:active, a:visited {
+         color: {color:tags};
+         text-decoration: none;
+    }
+
+    #tags a:hover {
+         color: {color:tags hover};
+    }
+
+    /* POST TYPES */
+
+    .photo {
+         {block:If500pxPosts}
+         width: 500px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 400px;
+         {/block:If400pxPosts}
+    }
+
+    .photo img {
+         {block:If500pxPosts}
+         width: 500px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 400px;
+         {/block:If400pxPosts}
+    }
+
+    .postnote {
+         {block:If500pxPosts}
+         width: 500px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 400px;
+         {/block:If400pxPosts}
+         color: {color:post border};
+         font-family: 'Nunito Sans';
+         font-size: 9px;
+         letter-spacing: 1px;
+         padding: 10px;
+         margin-left: auto;
+         margin-right: auto;
+    }
+
+    .postnote a, a:active, a:visited {
+         color: {color:tags};
+    }
+
+    .postnote a:hover {
+         color: {color:tags hover};
+    }
+
+    /* QUOTE */
+
+    .quote {
+         {block:If500pxPosts}
+         width: 430px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 330px;
+         {/block:If400pxPosts}
+         font-family: 'Times New Roman';
+         font-size: 12px;
+         font-style: italic;
+         text-align: center;
+         border-bottom: 1px solid {color:post border};
+         padding: 10px;
+         margin-left: 25px;
+    }
+
+    .qusource {
+         font-size: 10px;
+         font-variant: small-caps;
+         letter-spacing: 1px;
+         text-transform: lowercase;
+         text-align: center;
+         padding-top: 10px;
+    }
+
+    /* CHAT */
+
+    .chat {
+         height: auto;
+         width: auto;
+         border-top: 1px solid {color:post border};
+         border-left: 1px solid {color:post border};
+         border-right: 1px solid {color:post border};
+    }
+
+    .line {
+         height: auto;
+         width: auto;
+         border-bottom: 1px solid {color:post border};
+    }
+
+    /* ASKS */
+
+    .ask {
+         {block:If500pxPosts}
+         width: 430px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 330px;
+         {/block:If400pxPosts}
+         font-family: 'Times New Roman';
+         font-size: 12px;
+         font-style: italic;
+         text-align: justify;
+         border-bottom: 1px solid {color:post border};
+         padding: 10px;
+         margin-left: 25px;
+    }
+
+    .asker {
+         {block:If500pxPosts}
+         width: 430px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 330px;
+         {/block:If400pxPosts}
+         font-family: 'Arial';
+         font-size: 10px;
+         font-variant: small-caps;
+         letter-spacing: 1px;
+         text-transform: lowercase;
+         text-align: center;
+         border-bottom: 1px solid {color:post border};
+         padding: 10px;
+         margin-left: 25px;
+    }
+
+    .answer {
+         {block:If500pxPosts}
+         width: 430px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 330px;
+         {/block:If400pxPosts}
+         padding: 10px;
+         margin-left: 25px;
+         margin-top: 35px;
+         border: 1px solid {color:post border};
+    }
+
+    .answerer {
+         color: {color:links};
+         font-family: 'Arial';
+         font-size: 10px;
+         font-variant: small-caps;
+         letter-spacing: 1px;
+         text-transform: lowercase;
+         text-align: center;
+         padding-top: 7px;
+    }
+
+    /* AUDIO */
+
+    .audio {
+         {block:If500pxPosts}
+         width: 500px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 400px;
+         {/block:If400pxPosts}
+    }
+
+    .albumart {
+         height: 105px;
+         width: 105px;
+         border: 5px solid {color:post border};
+         margin-top: 7px;
+         overflow: hidden;
+         z-index: 7;
+    }
+
+    .albumart img {
+         height: 105px;
+         width: 105px;
+    }
+
+    .player {
+         background-color: transparent;
+         opacity: 0.5;
+         width: 25px;
+         height: 25px;
+         border-radius: 25px;
+         -moz-border-radius: 25px;
+         -webkit-border-radius: 25px;
+         -o-border-radius: 25px;
+         margin-top: -68px;
+         margin-left: 45px;
+         overflow: hidden;
+         position: absolute;
+         z-index: 8;
+    }
+
+    .adetails {
+         background-color: {color:post border};
+         height: 85px;
+         {block:If500pxPosts}
+         width: 384px;
+         {/block:If500pxPosts}
+         {block:If400pxPosts}
+         width: 284px;
+         {/block:If400pxPosts}
+         font-family: 'Arial';
+         font-size: 9px;
+         letter-spacing: 1px;
+         text-transform: lowercase;
+         text-align: center;
+         padding-top: 30px;
+         margin-top: -115px;
+         margin-left: 116px;
+         z-index: 7;
+    }
+
+    .iframe-controls--desktop {
+         margin-top: -5px;
+         {block:IfInvertTumblrControls}
+         filter: invert(100%);
+         {/block:IfInvertTumblrControls}
+         transform: scale(0.8);
+         transform-origin: 100% 0;
+         -webkit-transform: scale(0.8);
+         -webkit-transform-origin: 100% 0;
+         -moz-transform: scale(0.8);
+         -moz-transform-origin: 100% 0;
+         -ms-transform: scale(0.8);
+         -ms-transform-origin: 100% 0;
+         -o-transform: scale(0.8);
+         -o-transform-origin: 100% 0;
+    }
+
+
+
+    </style></head>
+    <body>
+    <!--BEGINNING OF CONTAINER-->
+    <div id="wap">
+    <!--BEGINNING OF LEFT SIDE-->
+    <div id="sa">
+    <!--BEGINNING OF "STAMP" (SIDEBAR)-->
+    <div id="stamp">
+    <!--BEGINNING OF SIDEBAR CONTENT-->
+    <div id="sidebar">
+    <!--DESCRIPTION-->
+    <div id="description">{text:description}</div>
+    <!--END DESCRIPTION-->
+    </div>
+    <!--END OF SIDEBAR CONTENT, BEGINNING TITLE-->
+    <h1>{text:title}</h1>
+    <!--END TITLE-->
+    </div>
+    <!--END "STAMP", BEGINNING OF OPTIONAL ABOWMAN FISH SCRIPT-->
+    {block:IfAbowmanFishSidebar}
+    <div class="fish">
+    <object type="application/x-shockwave-flash" style="outline:none;" data="http://cdn.abowman.com/widgets/fish/fish.swf?up_fishColor6=F5AF0F&up_backgroundImage=http://&up_fishColor2=F5AF0F&up_fishColor7=E6E6E6&up_fishColor10=F5AF0F&up_fishName=fishies&up_backgroundColor=78C4B5&up_numFish=10&up_foodColor=FCB347&up_fishColor9=E6E6E6&up_fishColor8=F5AF0F&up_fishColor4=F5AF0F&up_fishColor5=E6E6E6&up_fishColor1=E6E6E6&up_fishColor3=E6E6E6&" width="400" height="560"><param name="movie" value="http://cdn.abowman.com/widgets/fish/fish.swf?up_fishColor6=F5AF0F&up_backgroundImage=http://&up_fishColor2=F5AF0F&up_fishColor7=E6E6E6&up_fishColor10=F5AF0F&up_fishName=fishies&up_backgroundColor=78C4B5&up_numFish=10&up_foodColor=FCB347&up_fishColor9=E6E6E6&up_fishColor8=F5AF0F&up_fishColor4=F5AF0F&up_fishColor5=E6E6E6&up_fishColor1=E6E6E6&up_fishColor3=E6E6E6&"></param><param name="AllowScriptAccess" value="always"></param><param name="wmode" value="opaque"></param><param name="scale" value="noscale"/><param name="salign" value="tl"/></object>
+    </div>
+    {/block:IfAbowmanFishSidebar}
+    <!--END OPTIONAL ABOWMAN FISH SCRIPT-->
+    </div>
+    <!--END LEFT SIDE-->
+
+    <!--BEGINNING MENU BAR-->
+    <div id="mbar"><p>
+    <a href="{text:link 1 url}"><span style="font-size: 21px;"><i class="fa fa-power-off"></i></span></a>
+    <div class="ltt lt1"><a title="ᴍᴏᴜsᴇ ᴏᴠᴇʀ ᴛʜᴇ ɪᴄᴏɴ ᴀʙᴏᴠᴇ">{text:link 1 title}</a></div>
+    <a href="{text:link 2 url}"><span style="font-size: 20px;"><i class="fa fa-telegram"></i></span></a>
+    <div class="ltt lt2"><a title="ᴍᴏᴜsᴇ ᴏᴠᴇʀ ᴛʜᴇ ɪᴄᴏɴ ᴀʙᴏᴠᴇ">{text:link 2 title}</a></div>
+    <a href="{text:link 3 url}"><span style="font-size: 23px;"><i class="fa fa-clock-o"></i></span></a>
+    <div class="ltt lt3"><a title="ᴍᴏᴜsᴇ ᴏᴠᴇʀ ᴛʜᴇ ɪᴄᴏɴ ᴀʙᴏᴠᴇ">{text:link 3 title}</a></div>
+    <a href="{text:link 4 url}"><span style="font-size: 20px;"><i class="fa fa-user-circle"></i></span></a>
+    <div class="ltt lt4"><a title="ᴍᴏᴜsᴇ ᴏᴠᴇʀ ᴛʜᴇ ɪᴄᴏɴ ᴀʙᴏᴠᴇ">{text:link 4 title}</a></div>
+    <a href="{text:link 5 url}"><span style="font-size: 21px;"><i class="fa fa-plus-circle"></i></span></a>
+    <div class="ltt lt5"><a title="ᴍᴏᴜsᴇ ᴏᴠᴇʀ ᴛʜᴇ ɪᴄᴏɴ ᴀʙᴏᴠᴇ">{text:link 5 title}</a></div>
+    <a href="https://angelicxi.tumblr.com/" title="ᴛʜᴇᴍᴇ ʙʏ ᴀɴɢᴇʟɪᴄxɪ"><span style="font-size: 24px;"><i class="fa fa-cog"></i></span></a>
+    <div class="ltt lt6"><a title="ᴍᴏᴜsᴇ ᴏᴠᴇʀ ᴛʜᴇ ɪᴄᴏɴ ᴀʙᴏᴠᴇ">theme</a></div>
+    {block:Pagination}{block:NextPage}<a href="{NextPage}"><span style="font-size: 21px;"><i class="fa fa-chevron-circle-right"></i></span></a>
+    <div class="ltt lt7"><a title="ᴍᴏᴜsᴇ ᴏᴠᴇʀ ᴛʜᴇ ɪᴄᴏɴ ᴀʙᴏᴠᴇ">forward</a></div>{/block:NextPage}
+    {block:PreviousPage}<a href="{PreviousPage}"><span style="font-size: 21px;"><i class="fa fa-chevron-circle-left"></i></span></a>
+    <div class="ltt lt8"><a title="ᴍᴏᴜsᴇ ᴏᴠᴇʀ ᴛʜᴇ ɪᴄᴏɴ ᴀʙᴏᴠᴇ">rewind</a></div>{/block:PreviousPage}{/block:Pagination}
+    </p></div>
+    <!--END MENU BAR-->
+
+    <!--BEGINNING RIGHT SIDE-->
+    <div id="sb">
+    {block:Posts}
+    <!--START OF POSTS-->
+    <div id="post">
+
+    {block:Text}
+    {block:Title}<h3>{Title}</h3>{/block:Title}
+    {Body}
+    {/block:Text}
+
+    {block:Link}<h3><a href="{URL}" {Target}>{Name}</a></h3>{block:Description}{Description}{/block:Description}{/block:Link}
+
+    {block:Photo}
+    <div class="photo">{LinkOpenTag}<img src="{PhotoURL-HighRes}">{LinkCloseTag}</div>{block:Caption}{Caption}{/block:Caption}
+    {/block:Photo}
+
+    {block:If500pxPosts}
+    {block:Photoset}{Photoset-500}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}
+
+    {block:Video}{Video-500}{block:Caption}{Caption}{/block:Caption}{/block:Video}
+    {/block:If500pxPosts}
+
+    {block:If400pxPosts}
+    {block:Photoset}{Photoset-400}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}
+
+    {block:Video}{Video-400}{block:Caption}{Caption}{/block:Caption}{/block:Video}
+    {/block:If400pxPosts}
+
+    {block:Audio}
+    <div id="audio">
+    <div class="albumart">{block:AlbumArt}<img src="{AlbumArtURL}">{/block:AlbumArt}</div>
+    <div class="player">{AudioPlayer}</div>
+    <div class="adetails">
+    {block:TrackName}<span style="font-size: 12px; font-weight: bold; font-style: italic; color: {color:audio post title};">{TrackName}</span><br>{/block:TrackName}
+    <span style="font-variant: small-caps;">
+    {block:Artist}<b>artist:</b>&nbsp; {Artist}<br>{/block:Artist}
+    {block:Album}<b>album:</b>&nbsp; {Album}<br>{/block:Album}
+    {block:PlayCount}<b>played:</b>&nbsp; {PlayCount} times{/block:PlayCount}</span>
+    </div>
+    </div>
+    {/block:Audio}
+
+    {block:Quote}
+    <div class="quote">{Quote}</div>
+    {block:Source}
+    <div class="qusource">{Source}</div>
+    {/block:Source}
+    {/block:Quote}
+
+    {block:Chat}
+    {block:Title}<p><h3>{Title}</h3></p>{/block:Title}
+    <div class="chat">
+    {block:Lines}
+    <div class="line"><p>{block:Label}<span style="font-variant:small-caps; text-transform:lowercase;"><b>{Label}</b></span>{/block:Label} &nbsp; {Line}</p></div>
+    {/block:Lines}
+    </div>
+    {/block:Chat}
+
+    {block:Answer}
+    <div class="asker">{Asker} {text:asker}</div>
+    <div class="ask"><p>{Question}</p></div>
+    {block:Answerer}
+    <div class="answer">{Answer}</div>
+    <div class="answerer">{Answerer}</div>
+    {/block:Answerer}
+    {Replies}
+    {/block:Answer}
+
+    </div>
+    <!--END OF POST ITSELF, START OF INFO BLOCKS-->
+    <div id="info">
+    <b><a href="{Permalink}">{block:Date}{DayOfMonthWithZero} {Month} {Year}{/block:Date}</a>{block:NoteCount} &nbsp; ♦ &nbsp; <a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}<br>
+    {block:RebloggedFrom}{block:ContentSource}<a href="{SourceURL}" title="{SourceTitle}">origin</a>&nbsp; • &nbsp; {/block:ContentSource}<a href="{ReblogParentURL}" title="{ReblogParentName}">via</a> &nbsp; • &nbsp; {/block:RebloggedFrom}<a href="{ReblogURL}">reblog</a></b>
+    </div>
+    <!--END OF INFO BLOCK, START OF TAGS-->
+    <div id="tags">{block:HasTags}<i class="fa fa-tag" aria-hidden="true"></i> &nbsp; <span style="font-size: 8px; font-style:italic;">{block:Tags}<a href="{TagURL}">{Tag};</a>&nbsp;&nbsp;{/block:Tags}</span>{/block:HasTags}</div>
+    <!--END OF TAGS-->
+    {/block:Posts}
+    <!--END OF POSTS, START OF POSTNOTE BLOCK-->
+    <div class="postnote">
+    {block:PostNotes}{PostNotes}{/block:PostNotes}
+    </div>
+    <!--END OF POSTNOTE BLOCK-->
+    </div>
+    <!--END OF RIGHT SIDE-->
+    </div>
+    <!--END ALL-->
+    </body></html>
+    
