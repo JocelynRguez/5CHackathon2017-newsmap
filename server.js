@@ -6,20 +6,22 @@ var path    = require("path");
 var mysql = require('mysql');
 var router = express.Router();
 
+router.use(function(req,res,next){
+	next();
+});
 
-function sayHello(request, response){
-	reponse.send("hello!")
-}
+router.get("/map.js", function(req,res){
+	res.sendFile(path.join(__dirname+'/map.js'));
+	console.log("GET map.js...");
+});
 
-// request.get({
-//   url: "https://api.nytimes.com/svc/topstories/v2/national.json",
-//   qs: {
-//     'api-key': "20ec7403e3f64b35b7abeef0bb5dfb4b"
-//   },
-// }, function(err, response, body) {
-//   body = JSON.parse(body);
-//   console.log(body);
-// })
+router.get("/", function(req,res){
+	res.sendFile(path.join(__dirname+'/map.html'));
+	console.log("GET map.html...");
+});
+
+app.use('/', router);
+
 
 var server = app.listen(3000, listening);
 
