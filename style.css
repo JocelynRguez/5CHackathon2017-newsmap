@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
 body{
-  background-color: #FA8072;
+  background-color: #F0B1A9;
+  font-family: 'Oxygen', sans-serif;
+
 }
 #container1{
-  color: white;
+  color: #4C4C4C;
+  width: 60%;
+  margin: auto;
   text-align: center;
 }
 #bheader{
-  color: white;
+  color: #4C4C4C;
+  width: 60%;
+  margin: auto;
   text-align: center;
 }
 #container2{
-  color: white;
-  text-align: center;  
+  color: #4C4C4C;
+  width: 60%;
+  margin: auto;
+  text-align: center;
 }
