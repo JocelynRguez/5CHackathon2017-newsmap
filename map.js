@@ -40,3 +40,8 @@ $.ajax({
 }).fail(function(err) {
   throw err;
 });
+
+
+var h = "hello";
+console.log("h");
+console.log(h);
