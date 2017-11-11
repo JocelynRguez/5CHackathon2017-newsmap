@@ -1,25 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+
+#title {
+font-family: 'Cinzel', serif;
+font-size: 40px;
+
+}
 
 body{
   background-color: #F0B1A9;
   font-family: 'Oxygen', sans-serif;
-
 }
+
 #container1{
   color: #4C4C4C;
-  width: 60%;
+  width: 70%;
   margin: auto;
   text-align: center;
 }
 #bheader{
   color: #4C4C4C;
-  width: 60%;
+  width: 70%;
   margin: auto;
   text-align: center;
 }
 #container2{
   color: #4C4C4C;
-  width: 60%;
+  width: 70%;
   margin: auto;
   text-align: center;
+}
+
+.buttons {
+  border: none;
+  width: 100px;
+  height: 30px;
+  background-color: #4C4C4C;
+  color: white;
+}
+
+.buttons:hover {
+  background-color: #787d87;
+}
+
+#PR {
+  padding-right: 10px;
+}
+
+#BC {
+  padding-top: 15px;
 }
